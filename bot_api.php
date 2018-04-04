@@ -13,6 +13,8 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
 $message_rece = $arrJson['events'][0]['message']['text'];
 
+echo $message_rece;
+
 if($message_rece == "ID"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
