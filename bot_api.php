@@ -19,7 +19,17 @@ if($message_rece == "ID"){
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
 }
-else if(strpos( $message_rece, "สวัสดี")||strpos( $message_rece, "หวัดดี")||strpos( $message_rece, "hi")||strpos( $message_rece, "hello")){
+elseif(strpos( $message_rece, "สวัสดี")){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "สวัสดีครับ สนใจรถยนต์ Nissan รุ่นไหนสอบถามได้นะครับ";
+
+  $arrPostData['messages'][1]['type'] = "sticker";
+  $arrPostData['messages'][1]['packageId'] = "2";
+  $arrPostData['messages'][1]['stickerId'] = "514";
+}
+elseif(strpos( $message_rece, "หวัดดี")){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
