@@ -12,8 +12,7 @@ $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
 $message_rece = $arrJson['events'][0]['message']['text'];
-
-echo $message_rece;
+$message_rece = 'หวัดดี';
 
 if($message_rece == "ID"){
   $arrPostData = array();
@@ -42,6 +41,7 @@ elseif(strpos( $message_rece, "หวัดดี")){
   $arrPostData['messages'][1]['stickerId'] = "514";
 }
 
+print_r($arrPostData);
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
