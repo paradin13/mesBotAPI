@@ -1,5 +1,5 @@
 <?php
-
+require('function_msg.php');
 $strAccessToken = "VqXurCW45Jgsva1rnjGbsbcBQD5xywqTepx5iVy/RuSbZYLtGWURg4g8QAgrI8mjSNZERmfBjUAMlXvI2Vee+fnttq574ItW9mGv1FKlv9k4JSy88Re5LfmNTI/0VY2yAhsZSX+o5y9HfxBuzTYoEgdB04t89/1O/w1cDnyilFU=";
 
 $content = file_get_contents('php://input');
